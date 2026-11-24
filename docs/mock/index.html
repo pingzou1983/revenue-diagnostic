@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>栖衡 · 酒店收益诊断 Demo</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./demo-model.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="demo-banner">交互原型 · 全部为合成数据 · 无真实 OCR、鉴权或经营操作</div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="栖衡首页"><span class="brand-mark">栖</span><span>栖衡<small>REVENUE STUDIO</small></span></a>
+    <div class="role-switch" aria-label="演示身份">
+      <button type="button" data-role="consultant" aria-pressed="true">顾问工作台</button>
+      <button type="button" data-role="owner" aria-pressed="false">业主端</button>
+    </div>
+    <button type="button" id="reset" class="quiet">重置演示</button>
+  </header>
+  <div id="storage-warning" class="notice warning" hidden></div>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <p class="eyebrow">WORKSPACE / 演示空间</p>
+      <label for="hotel-picker">当前酒店</label>
+      <select id="hotel-picker"></select>
+      <div id="hotel-caption" class="muted small"></div>
+      <nav id="navigation" aria-label="主要导航"></nav>
+      <div class="sidebar-note"><span class="status-dot"></span> 规则尚未冻结<p>让事实可见，让决策有据。<br>不自动推荐涨价或承诺收益。</p></div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="reset-dialog">
+    <h2>重新开始演示？</h2>
+    <p>仅清除本 Demo 的本地进度，恢复四家虚构酒店。不会修改项目或其他网站的数据。</p>
+    <div class="button-row"><button type="button" id="cancel-reset" class="secondary">保留进度</button><button type="button" id="confirm-reset" class="primary">确认重置</button></div>
+  </dialog>
+  <noscript>此静态交互 Demo 需要启用 JavaScript；不会向第三方发送数据。</noscript>
+</body>
+</html>
