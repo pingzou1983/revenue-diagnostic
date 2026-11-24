@@ -14,7 +14,7 @@
 | 业务思维导图：[Markdown](./docs/diagrams/酒店收入增长诊断系统_业务思维导图_V0.3.2.md) · [SVG](./docs/diagrams/酒店收入增长诊断系统_业务思维导图_V0.3.2.svg) | 业务流程、诊断、渠道情景、交付与边界 |
 | 系统架构思维导图：[Markdown](./docs/diagrams/酒店收入增长诊断系统_系统架构思维导图_V0.3.2.md) · [SVG](./docs/diagrams/酒店收入增长诊断系统_系统架构思维导图_V0.3.2.svg) | 建议的逻辑架构、数据流、安全和阶段边界 |
 | [项目开发 Agent](./docs/agents/revenue-diagnostic.agent.md) | 项目协作规则、公开参考项目、复用边界和许可证注意事项；文档化定义，未自动注册 |
-| [双端静态 Demo](./docs/mock/index.html) · [使用说明](./docs/mock/README.md) | 顾问端与业主端交互原型，全部使用合成数据，不连接后台 |
+| [双端静态 Demo](./docs/mock/index.html) · [单文件分享版](./docs/mock/demo.html) · [使用说明](./docs/mock/README.md) | 顾问端与业主端交互原型，全部使用合成数据，不连接后台 |
 | [历史文档](./docs/archive/) | 旧版 PRD、数据字典、导图及需求追踪矩阵，仅供参考 |
 
 建议先阅读 PRD 的「范围基线」和「待确认事项」，再结合数据字典、导图及 PRD 中的验收用例进行评审。导图的 Markdown 包含可编辑的 Mermaid 源；修改后需同步重新导出 SVG。

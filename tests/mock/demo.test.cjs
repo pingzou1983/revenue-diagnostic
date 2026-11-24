@@ -3,6 +3,25 @@ const assert = require("node:assert/strict");
 const M = require("../../docs/mock/demo-model.js");
 const first = () => M.createState().hotels[0];
 
+test("single-file demo embeds current assets in order without external dependencies", () => {
+  const fs = require("node:fs");
+  const path = require("node:path");
+  const vm = require("node:vm");
+  const read = (name) => fs.readFileSync(path.join(__dirname, "../../docs/mock", name), "utf8").replace(/\r\n/g, "\n");
+  const html = read("demo.html");
+  const styles = [...html.matchAll(/<style>([\s\S]*?)<\/style>/g)];
+  const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+  assert.equal(styles.length, 1);
+  assert.equal(styles[0][1], `\n${read("styles.css")}`);
+  assert.equal(scripts.length, 2);
+  ["demo-model.js", "app.js"].forEach((name, index) => {
+    assert.equal(scripts[index][1], `\n${read(name).replace(/<\/script/gi, "<\\/script")}`);
+    assert.doesNotThrow(() => new vm.Script(scripts[index][1]));
+  });
+  assert.ok(html.indexOf("<script>") > html.indexOf("</noscript>"));
+  assert.doesNotMatch(html, /<script[^>]+\bsrc=|<link[^>]+\bhref=|@import|url\(/i);
+});
+
 test("unconfirmed/unknown facts do not become zero or ready metrics", () => {
   const h = first();
   assert.equal(M.getMetrics(h).occ, null);
