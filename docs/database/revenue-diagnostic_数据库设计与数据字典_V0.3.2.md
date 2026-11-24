@@ -1,7 +1,9 @@
 # revenue-diagnostic：数据库设计与数据字典
 
-> **评审草案 V0.3.2｜不含建表 SQL**  
-> 项目名称：`revenue-diagnostic`；业务定位为酒店收入增长诊断系统。依据 [PRD V0.3.2](./revenue-diagnostic_PRD_V0.3.2.md)，以 [旧版数据字典](./deprecated/revenue-diagnostic_数据库设计与数据字典_V0.3.2.md)为基础重新整理；[历史需求追踪与验收矩阵](./deprecated/revenue-diagnostic_需求追踪与验收矩阵_V0.3.2.md)仅供参考。周期和渠道事实、快照、三方案、任务、授权与交付均需评审；新增范围、字段、规则和留存策略须甲方、业务、研发及法务确认后才能冻结。本文件定义逻辑契约，不代表数据库已经实现，也不要求每个逻辑结构必须对应一张物理表。
+> **评审草案 V0.3.2｜逻辑设计**
+> 项目名称：`revenue-diagnostic`；业务定位为酒店收入增长诊断系统。依据 [PRD V0.3.2](../prd/revenue-diagnostic_PRD_V0.3.2.md)，以 [旧版数据字典](../archive/revenue-diagnostic_数据库设计与数据字典_V0.3.2.md)为基础重新整理；[历史需求追踪与验收矩阵](../archive/revenue-diagnostic_需求追踪与验收矩阵_V0.3.2.md)仅供参考。周期和渠道事实、快照、三方案、任务、授权与交付均需评审；新增范围、字段、规则和留存策略须甲方、业务、研发及法务确认后才能冻结。本文件定义逻辑契约，不代表数据库已经实现，也不要求每个逻辑结构必须对应一张物理表。
+
+对应的 [PostgreSQL 首版初始化脚本](../../src/database/001_initial_schema.sql)供空测试数据库评审，物理结构及执行限制见 [README](../../README.md#数据库初始化评审用)；不代表业务规则或生产部署已获批准。
 
 ## 1. 设计原则与通用约定
 
@@ -493,4 +495,4 @@ flowchart TD
 
 ## 17. 与需求及验收的对应
 
-完整需求和验收以 [PRD V0.3.2](./revenue-diagnostic_PRD_V0.3.2.md) 为准；[历史需求追踪与验收矩阵](./deprecated/revenue-diagnostic_需求追踪与验收矩阵_V0.3.2.md)仅供参考。第 12～16 节的建议结构应与 PRD 第 21～22 节共同评审；文档关联不代表测试已经通过。
+完整需求和验收以 [PRD V0.3.2](../prd/revenue-diagnostic_PRD_V0.3.2.md) 为准；[历史需求追踪与验收矩阵](../archive/revenue-diagnostic_需求追踪与验收矩阵_V0.3.2.md)仅供参考。第 12～16 节的建议结构应与 PRD 第 21～22 节共同评审；文档关联不代表测试已经通过。

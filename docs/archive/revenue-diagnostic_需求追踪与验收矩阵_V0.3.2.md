@@ -1,7 +1,7 @@
 # revenue-diagnostic：需求追踪与验收矩阵 V0.3.2
 
 > **评审草案｜并非测试执行报告或甲方签收记录**  
-> 项目名称：`revenue-diagnostic`；配套 [PRD V0.3.2](./revenue-diagnostic_PRD_V0.3.2.md)及[数据库设计与数据字典 V0.3.2](./revenue-diagnostic_数据库设计与数据字典_V0.3.2.md)。本表覆盖 REQ-001～150，引用 PRD 中的 AT 和建议成功标准 SC；需求、用例及数据结构均不表示系统已经实现或测试通过。
+> 项目名称：`revenue-diagnostic`；配套 [PRD V0.3.2](../prd/revenue-diagnostic_PRD_V0.3.2.md)及[数据库设计与数据字典 V0.3.2](./revenue-diagnostic_数据库设计与数据字典_V0.3.2.md)。本表覆盖 REQ-001～150，引用 PRD 中的 AT 和建议成功标准 SC；需求、用例及数据结构均不表示系统已经实现或测试通过。
 
 **使用方式**
 
